@@ -1,0 +1,18 @@
+<%- include('../partials/header', { title: 'Пошук' }) %>
+<%- include('../partials/navbar') %>
+
+<main>
+    <h1>Пошук</h1>
+    <form action="/users/search" method="GET">
+        <div>
+            <label for="query">Пошуковий запит:</label>
+            <input type="text" id="query" name="q" <% if (locals.q) {%>value="<%=q %>"<% } %>>
+        </div>
+        <button type="submit">Шукати</button>
+    </form>
+    <% if (locals.found !== undefined) {%>
+      <p>Знайдено користувачів: <%= found %></p>
+    <% } %>
+</main>
+
+<%- include('../partials/footer') %>

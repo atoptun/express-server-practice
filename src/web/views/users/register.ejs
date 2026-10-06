@@ -1,9 +1,9 @@
-<%- include('partials/header', { title: 'Головна' }) %>
-<%- include('partials/navbar') %>
+<%- include('../partials/header', { title: 'Реєстрація користувача' }) %>
+<%- include('../partials/navbar') %>
 
 <main>
   <h1>Реєстрація</h1>
-  <form action="/register" method="POST">
+  <form action="/users/register" method="POST">
       <div>
           <label for="username">Ім'я користувача:</label>
           <input type="text" id="username" name="username">
@@ -20,4 +20,4 @@
   </form>
 </main>
 
-<%- include('partials/footer') %>
+<%- include('../partials/footer') %>
