@@ -1,0 +1,10 @@
+<%- include('partials/header', { title: 'Головна' }) %>
+<%- include('partials/navbar') %>
+
+<main>
+  <% if (locals.message) {%>
+    <%= locals.message %>
+  <% } %>
+</main>
+
+<%- include('partials/footer') %>

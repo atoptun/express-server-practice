@@ -9,7 +9,7 @@ import {
 const userRouter = Router();
 
 userRouter.get("/register", getRegister);
-userRouter.post('/register', postRegister)
+userRouter.post("/register", postRegister);
 userRouter.get("/register-success", getRegisterSuccess);
 userRouter.get("/search", getSearch);
 

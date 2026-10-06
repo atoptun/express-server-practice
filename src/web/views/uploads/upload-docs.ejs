@@ -1,0 +1,19 @@
+<%- include('../partials/header', { title: 'Завантаження документів' }) %>
+<%- include('../partials/navbar') %>
+
+  <main class="container" style="max-width: 600px;">
+    <h1>Завантажити документи</h1>
+    <form action="/uploads/upload-docs" method="POST" enctype="multipart/form-data">
+      <div>
+        <label for="avatar">Аватар:</label>
+        <input type="file" id="avatar" name="avatar">
+      </div>
+      <div>
+        <label for="documents">Документи (до 3):</label>
+        <input type="file" id="documents" name="documents" multiple>
+      </div>
+      <button type="submit">Завантажити</button>
+    </form>
+  </main>
+
+<%- include('../partials/footer') %>

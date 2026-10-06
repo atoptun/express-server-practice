@@ -1,6 +1,7 @@
 import { Router } from "express";
 import booksRouter from "./books.router.js";
 import userRouter from "./users.router.js";
+import uploadsRouter from "./uploads.router.js";
 
 const webRouter = Router();
 
@@ -14,6 +15,8 @@ webRouter.get("/about", (req, res) => {
 
 webRouter.use(booksRouter);
 
-webRouter.use("/users", userRouter)
+webRouter.use("/users", userRouter);
+
+webRouter.use("/uploads", uploadsRouter);
 
 export default webRouter;

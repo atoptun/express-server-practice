@@ -1,0 +1,15 @@
+<%- include('../partials/header', { title: 'Завантаження файлів' }) %>
+<%- include('../partials/navbar') %>
+
+  <main class="container" style="max-width: 600px;">
+    <h1>Завантажити фотографії</h1>
+    <form action="/uploads/upload-multiple" method="POST" enctype="multipart/form-data">
+      <div>
+        <label for="photos">Виберіть файли (до 5):</label>
+        <input type="file" id="photos" name="photos" multiple>
+      </div>
+      <button type="submit">Завантажити</button>
+    </form>
+  </main>
+
+<%- include('../partials/footer') %>
