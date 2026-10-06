@@ -1,0 +1,23 @@
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Andrii Toptun <andrii.toptun@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "ejs": "^7.0.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
