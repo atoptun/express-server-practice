@@ -1,0 +1,7 @@
+node_modules
+
+compose.dev.yml
+compose.prod.yml
+compose.yml
+Dockerfile
+Dockerfile.dev

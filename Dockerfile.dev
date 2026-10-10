@@ -1,0 +1,20 @@
+FROM node:24
+
+WORKDIR /app
+
+COPY package.json yarn.lock ./
+
+# RUN yarn install --frozen-lockfile
+# RUN --mount=type=cache,target=/usr/local/share/.cache/yarn \
+#     yarn install --frozen-lockfile --prefer-offline
+RUN --mount=type=cache,target=/usr/local/share/.cache/yarn \
+    --mount=type=cache,target=/root/.cache/prisma \
+    yarn install --frozen-lockfile --prefer-offline
+    
+COPY . .
+
+# RUN yarn prisma generate
+
+EXPOSE 3000 9229
+
+ENTRYPOINT [ "yarn", "dev" ]
